@@ -260,6 +260,19 @@ class Bittrex
         return $this->send('account/getwithdrawalhistory');
     }
 
+
+    /**
+     * Used to retrieve your deposit history.
+     *
+     * @param string $currency
+     *
+     * @return array
+     */
+    public function getDepositHistory(string $currency): array
+    {
+        return $this->send('account/getdeposithistory');
+    }
+
     /**
      * Create and send an HTTP request.
      *
